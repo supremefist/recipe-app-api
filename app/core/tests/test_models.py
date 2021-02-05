@@ -95,3 +95,18 @@ class ModelTests(TestCase):
         )
 
         self.assertEquals(ingredient.name, str(ingredient))
+
+    def test_recipe_str(self):
+        """
+
+        :return:
+        """
+        recipe = models.Recipe.objects.create(
+            user=sample_user(),
+            title="Steak & Mushroom Sauce",
+            time_minutes=5,
+            price=5.00
+
+        )
+
+        self.assertEquals(recipe.title, str(recipe))
