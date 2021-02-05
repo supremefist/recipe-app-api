@@ -23,7 +23,7 @@ class BaseRecipeAttrViewSet(viewsets.GenericViewSet,
         return self.queryset.filter(user=self.request.user).order_by("-name")
 
     def perform_create(self, serializer):
-        """Create a new tag
+        """Create a new thing
 
         :param serializer:
         :return:
@@ -64,7 +64,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
         return self.queryset.filter(user=self.request.user).order_by("-title")
 
     def perform_create(self, serializer):
-        """Create a new tag
+        """Create a new recipe
 
         :param serializer:
         :return:
